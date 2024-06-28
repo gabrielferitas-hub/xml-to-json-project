@@ -1,0 +1,23 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type VehicleType {
+  typeId: String!
+  typeName: String!
+}
+
+type MakeType {
+  makeId: String!
+  makeName: String!
+  vehicleTypes: [VehicleType!]!
+}
+
+type Query {
+  getAllMakesAndVehicleTypes(pagination: PaginationInput!): [MakeType!]!
+}
+
+input PaginationInput {
+  page: Int! = 1
+  limit: Int! = 50
+}

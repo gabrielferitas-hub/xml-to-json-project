@@ -1,0 +1,15 @@
+# src/graphql/make-type.graphql
+type MakeType {
+  makeId: String!
+  makeName: String!
+  vehicleTypes: [VehicleType!]!
+}
+
+type VehicleType {
+  vehicleTypeId: String!
+  vehicleTypeName: String!
+}
+
+type Query {
+  getAllMakesAndVehicleTypes: [MakeType!]!
+}
